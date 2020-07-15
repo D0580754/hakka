@@ -52,9 +52,7 @@ def handle_message(event):
     uid = profile.user_id #使用者ID
     usespeak=str(event.message.text) #使用者講的話
     if event.message.text == "Help": 
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://imgur.com/VHAAgdU.png', preview_image_url='https://imgur.com/VHAAgdU.png'))
-    elif event.message.text == "help":
-        line_bot_api.reply_message(event.reply_token,ImageSendMessage(original_content_url='https://imgur.com/NTFTH3d.png', preview_image_url='https://imgur.com/o8WuFjh.png'))
+        line_bot_api.reply_message(event.reply_token, buttons_template())
 
 def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
     buttons = TemplateSendMessage(
