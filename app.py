@@ -47,10 +47,36 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+    #line_bot_api.reply_message(
+     #   event.reply_token,
+      #  TextSendMessage(text=event.message.text))
+    if event.message.text == "Help":
+        line_bot_api.reply_message(event.reply_token, buttons_template())
 
+def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
+    buttons = TemplateSendMessage(
+            alt_text='功能選單',
+            template=ButtonsTemplate(
+                    title='請選擇服務功能',
+                    text='此APP提供以下功能',
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                actions=[
+                     MessageTemplateAction(
+                        label='掛號',
+                        text='掛號'
+                    ), 
+                     MessageTemplateAction(
+                        label='診所',
+                        text='診所'
+                    ),
+                     MessageTemplateAction(
+                        label='醫院',
+                        text='醫院'
+                    )
+                ]
+            )
+    ) 
+    return buttons
 
 if __name__ == "__main__":
     app.run()
