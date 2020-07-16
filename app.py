@@ -24,6 +24,8 @@ line_bot_api = LineBotApi('iV2OXMJ2HNRPzxsC12MmZQ2YzSw62Hgq5YyWMtQjOjMcfFhnL0bma
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('f72d0c623547e1af685b4698b4cfae03')
 
+line_bot_api.push_message('U001571421ef73fd8b6f0d8cde5f68391', TextSendMessage(text='伺服器已啟動'))
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
