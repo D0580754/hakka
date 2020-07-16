@@ -51,6 +51,8 @@ def handle_message(event):
       #  TextSendMessage(text=event.message.text))
     if event.message.text == "Help":
         line_bot_api.reply_message(event.reply_token, buttons_template())
+    elif event.message.text == "掛號":
+        line_bot_api.reply_message(event.reply_token, buttons_template2())
 
 def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
     buttons = TemplateSendMessage(
@@ -71,6 +73,27 @@ def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
                      MessageTemplateAction(
                         label='醫院',
                         text='醫院'
+                    )
+                ]
+            )
+    ) 
+    return buttons
+
+def buttons_template2(): #尚未更正: 其他使用者看不到請輸入..
+    buttons = TemplateSendMessage(
+            alt_text='掛號方式',
+            template=ButtonsTemplate(
+                    title='請選擇掛號方式',
+                    text='電話掛號&一般掛號',
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                actions=[
+                     MessageTemplateAction(
+                        label='一般掛號',
+                        text='一般掛號'
+                    ), 
+                     MessageTemplateAction(
+                        label='電話掛號',
+                        text='電話掛號'
                     )
                 ]
             )
