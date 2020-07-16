@@ -22,7 +22,7 @@ import time
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
-line_bot_api = LineBotApi('0yMjtezWo6tmedGLf6kiHt2V4/6DrL1U5WIRTOkZWKjV317Wx6NuczTJx3IvubhNbx3JrlXxzAN/e/r5HXNVO3+NGERE0pM2BJHEXjmr51wcPAZrhRaZ12bi1eMqrYe6t/L6Jm8wZPOOIsqoVQdw+AdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('iV2OXMJ2HNRPzxsC12MmZQ2YzSw62Hgq5YyWMtQjOjMcfFhnL0bma+FnntoSVk9Rbx3JrlXxzAN/e/r5HXNVO3+NGERE0pM2BJHEXjmr51wFLp6YW/Kjue8tjy2m8wALtpUV5L5QHFrBG97CRpi6MgdB04t89/1O/w1cDnyilFU=')
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('f72d0c623547e1af685b4698b4cfae03')
 
