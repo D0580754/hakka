@@ -61,6 +61,22 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
         line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
         line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+    elif event.message.text == "複診":
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+    elif event.message.text == "電話掛號1":
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得用電話先掛號無？\n櫃檯：可以，麻煩給我你的身分證字號。\n櫃檯：做得，麻煩分??你?身分證號碼。\n病人：好的，A123456789\n病人：好，A123456789。'))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+    elif event.message.text == "電話掛號2":
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得電話先掛號無？\n櫃檯：不可以喔,必須現場掛好。\n櫃檯：做毋得哦！一定愛現場掛號。\n病人：好的\n病人：好。'))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+    elif event.message.text == "電話掛號3":
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
 def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
@@ -121,6 +137,30 @@ def buttons_template3():
                      MessageTemplateAction(
                         label='複診',
                         text='複診'
+                    )
+                ]
+            )
+    ) 
+    return buttons
+def buttons_template4(): 
+    buttons = TemplateSendMessage(
+            alt_text='電話掛號',
+            template=ButtonsTemplate(
+                    title='電話掛號',
+                    text='電話掛號',
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                actions=[
+                     MessageTemplateAction(
+                        label='電話掛號1',
+                        text='電話掛號1'
+                    ), 
+                     MessageTemplateAction(
+                        label='電話掛號2',
+                        text='電話掛號2'
+                    ),
+                    MessageTemplateAction(
+                        label='電話掛號3',
+                        text='電話掛號'
                     )
                 ]
             )
