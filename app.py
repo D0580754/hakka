@@ -57,7 +57,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template3())
     elif event.message.text == "電話掛號":
         line_bot_api.reply_message(event.reply_token, buttons_template4())
-
+    elif event.message.text == "初診":
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。\n'))
 def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
@@ -113,7 +114,7 @@ def buttons_template3():
                 actions=[
                      MessageTemplateAction(
                         label='初診',
-                        text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。\n'
+                        text='初診'
                     ), 
                      MessageTemplateAction(
                         label='複診',
