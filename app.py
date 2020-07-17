@@ -113,7 +113,7 @@ def buttons_template3():
                 actions=[
                      MessageTemplateAction(
                         label='初診',
-                        text='初診'
+                        text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。\n'
                     ), 
                      MessageTemplateAction(
                         label='複診',
