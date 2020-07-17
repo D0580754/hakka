@@ -53,8 +53,12 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template())
     elif event.message.text == "掛號":
         line_bot_api.reply_message(event.reply_token, buttons_template2())
+    elif event.message.text == "一般掛號":
+        line_bot_api.reply_message(event.reply_token, buttons_template3())
+    elif event.message.text == "電話掛號":
+        line_bot_api.reply_message(event.reply_token, buttons_template4())
 
-def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
+def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
             template=ButtonsTemplate(
@@ -79,7 +83,7 @@ def buttons_template(): #尚未更正: 其他使用者看不到請輸入..
     ) 
     return buttons
 
-def buttons_template2(): #尚未更正: 其他使用者看不到請輸入..
+def buttons_template2(): 
     buttons = TemplateSendMessage(
             alt_text='掛號方式',
             template=ButtonsTemplate(
@@ -99,6 +103,25 @@ def buttons_template2(): #尚未更正: 其他使用者看不到請輸入..
             )
     ) 
     return buttons
-
+def buttons_template3(): 
+    buttons = TemplateSendMessage(
+            alt_text='一般掛號',
+            template=ButtonsTemplate(
+                    title='初診/複診'',
+                    text='妳是初診還是複診',
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                actions=[
+                     MessageTemplateAction(
+                        label='初診',
+                        text='初診'
+                    ), 
+                     MessageTemplateAction(
+                        label='複診',
+                        text='複診'
+                    )
+                ]
+            )
+    ) 
+    return buttons
 if __name__ == "__main__":
     app.run()
