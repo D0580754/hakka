@@ -59,7 +59,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template4())
     elif event.message.text == "初診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
-        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='https://raw.githubusercontent.com/D0580754/hakka/master/%E5%88%9D%E8%A8%BA%E6%B5%B7%E9%99%B8.m4a', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='https://www.sample-videos.com/audio/mp3/crowd-cheering.mp3', duration=100000))
         line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
     elif event.message.text == "複診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
