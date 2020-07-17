@@ -107,7 +107,7 @@ def buttons_template3():
     buttons = TemplateSendMessage(
             alt_text='一般掛號',
             template=ButtonsTemplate(
-                    title='初診/複診,
+                    title='初診/複診',
                     text='妳是初診還是複診',
                 thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
                 actions=[
