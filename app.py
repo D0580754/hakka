@@ -58,7 +58,9 @@ def handle_message(event):
     elif event.message.text == "電話掛號":
         line_bot_api.reply_message(event.reply_token, buttons_template4())
     elif event.message.text == "初診":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。\n'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token,AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
 def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
