@@ -58,7 +58,7 @@ def handle_message(event):
     elif event.message.text == "電話掛號":
         line_bot_api.reply_message(event.reply_token, buttons_template4())
     elif event.message.text == "診所":
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://example.com/original.m4a', duration=240000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://drive.google.com/file/d/1XWZdvQd51aRVLL57sg9_06QUeZJc80GB/view', duration=13000))
 
         #line_bot_api.reply_message(event.reply_token, buttons_template5())
     elif event.message.text == "初診":
