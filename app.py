@@ -151,7 +151,7 @@ def buttons_template3():
                         text='複診'
                     ),URITemplateAction(
                                 label='uri2',
-                                uri='https://drive.google.com/file/d/1XWZdvQd51aRVLL57sg9_06QUeZJc80GB/view'
+                                uri='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3'
                     )
                 ]
             )
