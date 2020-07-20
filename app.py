@@ -93,7 +93,7 @@ def buttons_template():
             template=ButtonsTemplate(
                     title='請選擇服務功能',
                     text='此APP提供以下功能',
-                thumbnail_image_url='https://imgur.com/Hz1DDhu.jpg',
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
                 actions=[
                      MessageTemplateAction(
                         label='掛號',
