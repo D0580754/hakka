@@ -204,7 +204,7 @@ def buttons_template5():
     ) 
     return buttons
 
-def nextact(act):
+def nextact(event,act):
     if act == "a":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
 
