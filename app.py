@@ -149,6 +149,9 @@ def buttons_template3():
                      MessageTemplateAction(
                         label='複診',
                         text='複診'
+                    ),URITemplateAction(
+                                label='uri2',
+                                uri='https://drive.google.com/file/d/1XWZdvQd51aRVLL57sg9_06QUeZJc80GB/view'
                     )
                 ]
             )
