@@ -61,7 +61,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template5())
     elif event.message.text == "初診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://www.sample-videos.com/audio/mp3/crowd-cheering.mp3', duration=100000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://example.com/original.m4a', duration=100000))
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
     elif event.message.text == "複診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
@@ -118,7 +118,7 @@ def buttons_template2():
             template=ButtonsTemplate(
                     title='請選擇掛號方式',
                     text='電話掛號&一般掛號',
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 actions=[
                      MessageTemplateAction(
                         label='一般掛號',
@@ -138,7 +138,7 @@ def buttons_template3():
             template=ButtonsTemplate(
                     title='初診/複診',
                     text='妳是初診還是複診',
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 actions=[
                      MessageTemplateAction(
                         label='初診',
@@ -158,7 +158,7 @@ def buttons_template4():
             template=ButtonsTemplate(
                     title='電話掛號',
                     text='電話掛號',
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 actions=[
                      MessageTemplateAction(
                         label='電話掛號1',
@@ -182,7 +182,7 @@ def buttons_template5():
             template=ButtonsTemplate(
                     title='診所選擇',
                     text='診所選擇',
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 actions=[
                      MessageTemplateAction(
                         label='身心科',
