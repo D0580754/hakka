@@ -242,7 +242,7 @@ def buttons_template7():
                 actions=[
                      MessageTemplateAction(
                         label='內科',
-                        text='內科''
+                        text='內科'
                     ), 
                      MessageTemplateAction(
                         label='手術',
