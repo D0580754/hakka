@@ -69,7 +69,7 @@ def handle_message(event):
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/gju0mm0e26ublff/backsea.m4a', duration=14000))
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/3kdfgl104issg1g/backfour.m4a', duration=14000))        
     elif event.message.text == "電話掛號1":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得用電話先掛號無？\n櫃檯：可以，麻煩給我你的身分證字號。\n櫃檯：做得，麻煩分??你?身分證號碼。\n病人：好的，A123456789\n病人：好，A123456789。'))
+        line_bot_api.push_message(uid, TextSendMessage('櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得用電話先掛號無？\n櫃檯：可以，麻煩給我你的身分證字號。\n櫃檯：做得，麻煩分??你?身分證號碼。\n病人：好的，A123456789\n病人：好，A123456789。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropboxusercontent.com/s/yro6rm2h1rk2zob/%E9%9B%BB%E8%A9%B11%E6%B5%B7%E9%99%B8.m4a', duration=22000))
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropboxusercontent.com/s/lqpabvzcni2mpc9/%E9%9B%BB%E8%A9%B11%E5%9B%9B%E7%B8%A3.m4a', duration=19000))
     elif event.message.text == "電話掛號2":
