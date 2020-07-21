@@ -59,6 +59,18 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template5())
     elif event.message.text == "身心科":
         line_bot_api.reply_message(event.reply_token, buttons_template6())
+    elif event.message.text == "醫院":
+        line_bot_api.reply_message(event.reply_token, buttons_template7())
+    elif event.message.text == "內科":
+        line_bot_api.reply_message(event.reply_token, buttons_template8())
+    elif event.message.text == "手術":
+        line_bot_api.reply_message(event.reply_token, buttons_template9())
+    elif event.message.text == "急診":
+        line_bot_api.reply_message(event.reply_token, carousel_template())  
+    elif event.message.text == "泌尿科":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好哪不舒服?\n醫生：你好！哪位有毋鬆爽？\n病人：醫生最近一直解尿很不順。\n病人：醫生，恁久一直屙尿盡毋順。\n醫生：怎麼解尿不順說說看！\n醫生：係仰般屙尿毋順，試講看啊！\n病人：一直想尿可是去了廁所又一直尿不出來。\n病人：緊想屙尿毋過行到便所又屙毋出來。\n醫生：這情況多久了?\n醫生：這種情形有幾久咧。\n病人：最近幾年越來越嚴重。\n病人：最近幾年越來越嚴重。\n醫生：晚上睡覺會一直想解尿嗎?\n醫生：暗晡時睡目會緊想愛屙尿無?\n病人：晚上更誇張，躺下就想尿。\n病人：暗晡時還較誇張，睡下去就想愛屙尿。\n醫生：那有解出來嗎?\n醫生：該有屙出來無?\n病人：在廁所努力很久也只尿出一點點。\n病人：在便所企當久也還係屙出一點仔定。\n醫生：一個晚上這種情形會有幾次?\n醫生：這種情形一暗晡會有幾多到?\n病人：至少10次以上，整晚沒睡。\n病人：至少10到以上，歸暗晡無睡。\n醫生：聽你的描述，像是攝護腺肥大。\n醫生：聽你講?，像人係攝護腺肥大。\n病人：甚麼是攝護腺肥大?\n病人：麼?係攝護腺肥大？\n醫生：攝護腺肥大其實簡單來說就是尿道狹窄。\n醫生：攝護腺肥大其實簡單來講就係尿道變狹。\n病人：甚麼是尿道狹窄?\n病人：麼?係尿道變狹？\n醫生：尿道狹窄就是良性攝護腺肥大因壓迫到膀胱及尿道。\n醫生：尿道變狹就係良性攝護腺肥大，因為壓迫著膀胱摎尿道。\n病人：原來是這樣，難怪我尿得很辛苦。\n病人：原來係恁樣，難怪??屙尿屙到恁辛苦。\n醫生：是的，所以才會夜尿多次。\n醫生：係啊！所以正會暗晡時愛?起來屙恁多到。\n病人：那要如何確定?\n病人：該愛仰般來確定？\n醫生：一般確定診斷方式常見是肛門指診。\n醫生：一般確定診斷方式，較常用?係肛門指診。\n病人：現在就可以判斷嗎?\n病人：這下就做得判斷無?\n醫生：等會我會將手指伸入肛門，請放輕鬆比較不會有異物感。\n醫生：等加下??會將手指伸入肛門，請你放較輕鬆兜，毋使緊張。\n病人：我知道了。\n病人：??知咧。\n醫生：剛進行肛門指診結果，確定是攝護腺肥大。\n醫生：頭下進行肛門指診?結果，確定係攝護腺肥大。\n病人：那我該怎麼辦?\n病人：該??愛仰般？\n醫生：目前先吃藥。\n醫生：目前先食藥仔。\n病人：吃藥會好嗎?\n病人：食藥仔會好無?\n醫生：一般吃藥若沒改善可考慮手術方式。\n醫生：一般食藥仔若係無改善，做得考慮手術。\n病人：甚麼手術?\n病人：麼?手術？\n醫生：手術方式利用雷射光將多餘攝護腺組織瞬間氣化，達到治療效果。\n醫生：手術?方式係利用雷射光將多餘?攝護腺組織摎佢瞬間氣化，達到治療?效果。\n病人：那會很痛嗎?會流血嗎?\n病人：該會當痛無?會流血無?\n醫生：手術過程出血量及少，會輕微疼痛需住院一晚。\n醫生：手術?過程出血量極少，會有多少仔痛，愛住院一暗晡。\n病人：那目前我的情形先吃藥就可以嗎?\n病人：該目前???情形，先食藥就做得係無?\n醫生：先吃藥。\n醫生：先食藥仔。\n病人：吃多久?\n病人：愛食幾久？\n醫生：若解尿情形有比較改善，則藥物則有療效。\n醫生：若係屙尿?情形有較改善，該藥仔就有效果。\n病人：我了解了。\n病人：??了解咧，恁仔細／承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/giyv102ziwivshg/%E6%B3%8C%E5%B0%BF%E6%B5%B7%E9%99%B8.m4a', duration=170000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/gpf0nchk99b7rek/%E6%B3%8C%E5%B0%BF%E5%9B%9B%E7%B8%A3.m4a', duration=170000))       
     elif event.message.text == "初診":
         line_bot_api.push_message(uid, TextSendMessage('櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropboxusercontent.com/s/wr2r5hjjetuxd5s/abafcb0e-e190-ce77-6964-625a915d20fc%20%28online-audio-converter.com%29.m4a', duration=14000))
@@ -220,6 +232,139 @@ def buttons_template6():
             )
     ) 
     return buttons
+def buttons_template7(): 
+    buttons = TemplateSendMessage(
+            alt_text='醫院服務項目',
+            template=ButtonsTemplate(
+                    title='醫院',
+                    text='項目選擇',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
+                actions=[
+                     MessageTemplateAction(
+                        label='內科',
+                        text='內科''
+                    ), 
+                     MessageTemplateAction(
+                        label='手術',
+                        text='手術'
+                    ),
+                    MessageTemplateAction(
+                        label='急診',
+                        text='急診'
+                    ),
+                    MessageTemplateAction(
+                        label='泌尿科',
+                        text='泌尿科'
+                    )
 
+                ]
+            )
+    ) 
+    return buttons
+def buttons_template8(): 
+    buttons = TemplateSendMessage(
+            alt_text='內科看診/回診',
+            template=ButtonsTemplate(
+                    title='內科看診/回診',
+                    text='看診/回診/看報告',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
+                actions=[
+                     MessageTemplateAction(
+                        label='內科看診',
+                        text='內科看診'
+                    ), 
+                     MessageTemplateAction(
+                        label='內科回診',
+                        text='內科回診'
+                    ),
+                    MessageTemplateAction(
+                        label='看報告',
+                        text='看報告'
+                    )
+
+                ]
+            )
+    ) 
+    return buttons
+def buttons_template9(): 
+    buttons = TemplateSendMessage(
+            alt_text='手術狀態',
+            template=ButtonsTemplate(
+                    title='手術狀態',
+                    text='手術前/手術準備/手術進行',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
+                actions=[
+                     MessageTemplateAction(
+                        label='手術前',
+                        text='手術前'
+                    ), 
+                     MessageTemplateAction(
+                        label='手術準備',
+                        text='手術準備'
+                    ),
+                    MessageTemplateAction(
+                        label='手術進行中',
+                        text='手術進行中'
+                    )
+
+                ]
+            )
+    ) 
+    return buttons
+
+def  carousel_template():
+    carousel = TemplateSendMessage(
+        alt_text='急診情境',
+        template=CarouselTemplate(
+        columns=[
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                title='急診情境',
+                text='車禍',
+                actions=[
+                    MessageTemplateAction(
+                        label='車禍案例1',
+                        text='車禍案例1'
+                    ),
+                    MessageTemplateAction(
+                        label='車禍案例2',
+                        text='車禍案例2'
+                    )
+                ]
+            ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                title='急診情境',
+                text='燙傷',
+                actions=[
+                    MessageTemplateAction(
+                        label='燙傷案例1',
+                        text='燙傷案例1'
+                    ),
+                    MessageTemplateAction(
+                        label='燙傷案例2',
+                        text='燙傷案例2'
+                    )
+                ]
+            ),
+            CarouselColumn(
+                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                title='急診情境',
+                text='兒童',
+                actions=[
+                    MessageTemplateAction(
+                        label='兒童案例1',
+                        text='兒童案例1'
+                    ),
+                    MessageTemplateAction(
+                        label='兒童案例2',
+                        text='兒童案例2'
+                    )
+                ]
+            )
+        ]
+    )
+    )
+    return carousel      
 if __name__ == "__main__":
     app.run()
