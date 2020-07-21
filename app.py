@@ -103,6 +103,58 @@ def handle_message(event):
         line_bot_api.push_message(uid, TextSendMessage('醫生：您好寶寶怎麼了?\n醫生：你好！嬰兒仔有仰般係無?\n家屬：最近屁股紅紅的、有破皮，換尿布都會哭。\n家屬：最近屎朏紅紅、有爛皮，換尿布都會噭。\n醫生：讓我打開尿布看寶寶的臀部。\n醫生：分??打開尿布看嬰兒仔?屎朏。\n家屬：好的。\n家屬：好。\n醫生：這是尿布疹。\n醫生：這係尿布疹。\n家屬：甚麼是尿布疹。\n家屬：麼?係尿布疹。\n醫生：太長時間沒更換尿布，所導致的。\n醫生：時間忒長無換尿布，所因致?。\n家屬：我該怎麼辦?\n家屬：該??愛仰般？\n醫生：勤換尿布，保持乾爽，別使用爽身粉。\n醫生：愛較輒兜換尿布，保持燥爽，毋好用爽身粉。\n家屬：為甚麼不能用爽身粉，這樣不是可以更乾爽嗎?\n家屬：做麼?毋好用爽身粉，恁樣敢毋係做得較燥爽乜?\n醫生：尿液及糞便加上爽身粉會沾附皮膚，使皮膚不透氣。\n醫生：該尿摎大便加上爽身粉會黏在皮膚，皮膚就毋會透氣。\n家屬：我了解。\n家屬：??了解。\n醫生：開個藥膏給寶寶使用，少量擦。\n醫生：開隻藥膏分嬰兒仔使用，愛少量兜仔膏。\n家屬：好的，謝謝醫生。\n家屬：好，承蒙醫生。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/end557rr97vx0lt/%E5%B0%8F%E5%85%92%E7%A7%91%E6%B5%B7%E9%99%B8.m4a', duration=60000))
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/1zthhofqh4u5rux/%E5%B0%8F%E5%85%92%E7%A7%91%E5%9B%9B%E7%B8%A3.m4a', duration=60000))
+    elif event.message.text == "內科看診":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好請問那裏不舒服？\n醫生：你好！請問那位毋鬆爽？\n病人：醫生我最近食慾很好，一直吃而且尿很多、體重又減輕很奇怪。\n病人：醫生??最近盡會食，緊食又合尿盡多、體重又減輕當奇怪。\n醫生：請問家族有糖尿病史嗎？\n醫生：請問你?家族有人著過糖尿病無？\n病人：我爸爸有糖尿病。\n病人：??爸有糖尿病。\n醫生：那您比一般人得糖尿病的機會更高，先抽血驗糖化血色素，可以知道近三個月的血糖值。\n醫生：該你比一般人著糖尿病?機會較高，愛先抽血驗糖化血色素，就做得知你近三個月?血糖值。\n病人：我了解了，請問多久後回診看報告。\n病人：??了解咧，請問愛幾時來回診看報告。\n醫生：預約一週後看回診報告。\n醫生：預約一禮拜後來看回診報告。\n病人：好的。\n病人：好。恁仔細/承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/u4b3q4br76zmpgt/%E5%85%A7%E7%A7%91%E7%9C%8B%E8%A8%BA.m4a', duration=50000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/9w8tynbqezog5bb/%E5%85%A7%E7%A7%91%E7%9C%8B%E8%A8%BA%E5%9B%9B%E7%B8%A3.m4a', duration=50000))
+    elif event.message.text == "內科回診":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好最近一個月飲食還是吃很多尿很多嗎？體重有減輕嗎？\n醫生：你好！最近一隻月食東西，還係食當多合尿當多係無？體重有減輕無？\n病人：最近吃了糖尿病的藥，那些三多徵狀都沒了。\n病人：最近食糖尿病?藥仔，該兜三多?症頭全無咧。\n醫生：那先一樣規則服藥及飲食控制。\n醫生：該還係共樣愛照規則服藥摎飲食控制。\n病人：我理解了。\n病人：??了解咧，承蒙醫生。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/7ywab4hbrr500l4/%E5%85%A7%E7%A7%91%E5%9B%9E%E8%A8%BA%E6%B5%B7%E9%99%B8.m4a', duration=29000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/obxfnmqp430brcs/%E5%85%A7%E7%A7%91%E5%9B%9E%E8%A8%BA%E5%9B%9B%E7%B8%A3.m4a', duration=29000))
+    elif event.message.text == "看報告":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：上次初診時，您所形容的確實是很典型糖尿病徵象。\n醫生：上回初診?時節，你所講?確實係盡典型糖尿病?病症。\n病人：是喔！\n病人：係哦！\n醫生：這次驗的糖化血色素報告是異常，代表這三個月的血糖值很高。\n醫生：這擺驗?糖化血色素報告係無正常，表示這三隻月?血糖值盡高。\n病人：那我該怎麼辦，需要打胰島素嗎？\n病人：該??愛仰般？愛使打胰島素無？\n醫生：目前先吃藥控制，及飲食控制，除非控制不好才會用到打胰島素來控制。\n醫生：目前先食藥仔控制，摎飲食控制，除非控制毋好正愛用著打胰島素來控制。\n病人：我了解了。\n病人：??了解咧。\n醫生：預約一個月後回診。\n醫生：預約一個月後轉來回診。\n病人：好。\n病人：好，承蒙。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/ropd12nhajquqnz/%E5%85%A7%E7%A7%91%E7%9C%8B%E5%A0%B1%E5%91%8A%E6%B5%B7%E9%99%B8.m4a', duration=42000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/4t2he412cyv1zqo/%E5%85%A7%E7%A7%91%E7%9C%8B%E5%A0%B1%E5%91%8A%E5%9B%9B%E7%B8%A3.m4a', duration=42000))
+    elif event.message.text == "手術前":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好！明天早上９點進行XX手術。\n醫生：你好！天光日/韶\n朝晨９點進行XX手術。\n病人：好。\n病人：好。\n醫生：請問對藥物過敏？以前有手術過嗎？\n醫生：請問你有對麼?藥物過敏無？以前有手術過無？\n病人：都沒有。\n病人：全無。\n醫生：手術之前會先進行麻醉。\n醫生：手術以前愛先進行麻醉。\n病人：請問是局部還是全身的？\n病人：請問係局部抑係全身?？\n醫生：採取局部麻醉。\n醫生：採用局部麻醉。\n病人：我了解。\n病人：??知咧。\n醫生：麻煩請填寫手術同意書。\n醫生：麻煩你填寫手術同意書。\n病人：手術有風險嗎？\n病人：手術有風險無？\n醫生：任何手術皆有風險。\n醫生：任何手術都有風險。\n病人：我了解。\n病人：??了解。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/08u7fi0s8httac2/%E6%89%8B%E8%A1%93%E5%89%8D%E6%B5%B7%E9%99%B8.m4a', duration=39000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/5pr1efeogd1fnws/%E6%89%8B%E8%A1%93%E5%89%8D%E5%9B%9B%E7%B8%A3.m4a', duration=39000))
+    elif event.message.text == "手術準備":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：等會進行背部局部麻醉，請放輕鬆。\n醫生：等加下愛進行背囊?局部麻醉，請放輕鬆毋使緊張。\n病人：醫生我會的。\n病人：醫生??知咧。\n醫生＜麻醉科＞：確認生命徵象，生命徵象穩定、準備施打麻醉針。\n醫生＜麻醉科＞：確認生命徵象，生命徵象穩定、準備愛打麻醉針。\n病人：好，我會放鬆。\n病人：好，??會放輕鬆兜。\n醫生：確認手術周圍無反應。\n醫生：確認手術旁脣無反應。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/qx5c05r8xb6rab2/%E6%89%8B%E8%A1%93%E6%BA%96%E5%82%99%E6%B5%B7%E9%99%B8.m4a', duration=26000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/qx5c05r8xb6rab2/%E6%89%8B%E8%A1%93%E6%BA%96%E5%82%99%E6%B5%B7%E9%99%B8.m4a', duration=26000))
+    elif event.message.text == "手術進行中":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：再次確認生命徵象，手術順利完成，麻醉退後傷口會疼痛，開止痛消炎藥及保持傷口乾燥。\n醫生：再次確認生命徵象，手術順利完成，麻藥過忒後傷口會痛，??開兜止痛消炎藥還過愛保持傷口?燥爽。\n病人：我會注意的。\n病人：??會注意兜。\n醫生：預約下次回診拆線。\n醫生：預約下次回診?時節來拆線。\n病人：謝謝醫生。\n病人：承蒙醫生。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/2j16o280ef5pnov/%E6%89%8B%E8%A1%93%E9%80%B2%E8%A1%8C%E6%B5%B7%E9%99%B8.m4a', duration=27000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/kbcjib3ya5906rx/%E6%89%8B%E8%A1%93%E9%80%B2%E8%A1%8C%E5%9B%9B%E7%B8%A3.m4a', duration=27000))
+    elif event.message.text == "車禍案例1":
+        line_bot_api.push_message(uid, TextSendMessage('護理師：妳怎麼了，需要幫忙嗎?\n護理師：你仰般形，愛使手無?\n病人：剛在路上走路被車子撞到了，我的腳很痛，無法走路、一直在流血。\n病人：頭先行路?時節分車仔撞著，???腳盡痛，無法度行、緊流血。\n護理師：您先別動，先來止血、用固定板固定痛得位置，立刻請醫生過來評估。\n護理師：你莫停動，先來止血，用固定板固定痛?位所，黏時請醫生來看。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/slkgg8q5bb6jhne/%E8%BB%8A%E7%A6%8D1%E6%B5%B7%E9%99%B8.m4a', duration=25000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/gpjshhbv0emfe8o/%E8%BB%8A%E7%A6%8D1%E5%9B%9B%E7%B8%A3.m4a', duration=25000))
+    elif event.message.text == "車禍案例2":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好我是急診醫生，我幫您看一下腳痛及出血的位置。\n醫生：你好，??係急診醫生，??來摎你看一下，你哪位痛？哪位出血？\n病人：痛的位置在左腳，麻煩醫生。\n病人：痛?位所在左腳，麻煩醫生。\n醫生：我初步評估可能有骨折，需要做進一步檢查，先安排照片子，確定診斷。\n醫生：目前看來可能係骨頭斷忒，愛做進一步?檢查，先安排照片仔來確定診斷。\n病人：好的。\n病人：好。\n醫生：照片子的結果確定是骨折，立刻安排手術。\n醫生：照片仔?結果確定係骨頭斷忒，馬上愛安排手術。\n病人：請問需要住院嗎?\n病人：請問愛使戴院無？\n醫生：目前看片子結果必需手術，之後住院治療。\n醫生：手術了後愛住院治療。\n病人：我理解。\n病人：??了解，恁仔細／承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/rgkr0wsoq7eueld/%E8%BB%8A%E7%A6%8D2%E6%B5%B7%E9%99%B8.m4a', duration=46000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/5dv1yzkv4tj0rww/%E8%BB%8A%E7%A6%8D2%E5%9B%9B%E7%B8%A3.m4a', duration=46000))
+    elif event.message.text == "燙傷案例1":
+        line_bot_api.push_message(uid, TextSendMessage('護理師：妳怎麼了，需要幫忙嗎?\n護理師：你仰般形，愛使手無?\n病人：剛在煮晚餐手掌被熱湯燙傷了。\n病人：頭先煮夜?時節手巴掌分燒湯熝著。\n護理師：我們先用生理食鹽水沖洗傷口，請忍耐、等醫生過來評估。\n護理師：俚先用生理食鹽水來沖洗傷口，請你忍耐一下、等醫生過來看。\n病人：我的手掌刺痛而且好熱，好痛喔！\n病人：???手巴掌當燒合??滾痛，還痛哦！'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/kesvvhlrlngyrus/%E7%87%99%E5%82%B71%E6%B5%B7%E9%99%B8.m4a', duration=27000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/0u6op5u86809xp0/%E7%87%99%E5%82%B71%E5%9B%9B%E7%B8%A3.m4a', duration=27000))
+    elif event.message.text == "燙傷案例2":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好我是急診醫生，看您的傷口紅腫情形，為一級燙傷，必須持續冰敷。\n醫生：你好，??係急診醫生，看你?傷口恁紅恁腫，係一級熝傷，定著愛續町冰敷。\n病人：請問冰敷要多久？\n病人：請問冰敷愛幾久？\n醫生：每次冰敷約30分種，等會開3天份消炎止痛藥，若有發燒立刻回來就醫。\n醫生：每擺冰敷大約30分鐘，等下會開3日份?消炎止痛藥，若係有發燒馬上愛轉來看。\n病人：我知道了，謝謝醫生。\n病人：??知了，承蒙醫生。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/r1d6aqdliv70uzp/%E7%87%99%E5%82%B72%E6%B5%B7%E9%99%B8.m4a', duration=31000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/ppkw8kf6iylkae8/%E7%87%99%E5%82%B72%E5%9B%9B%E7%B8%A3.m4a', duration=31000))
+    elif event.message.text == "兒童案例1":
+        line_bot_api.push_message(uid, TextSendMessage('護理師：妳怎麼了，需要幫忙嗎?\n護理師：你仰般形，愛使手無?\n家屬：我的小孩一直拉肚子，有時候會吐、還有發燒，不知道甚麼原因？\n家屬：???細人仔緊屙痢肚，成時會嘔、還合會發燒，毋知做麼?會恁樣？\n護理師：我幫孩子先量生命徵象，體溫38.9度，我請醫生過來。\n護理師：??先摎佢量看有發燒無？體溫38.9度，??請醫生過來。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/4vwjjl32qoj4cbx/%E5%85%92%E7%AB%A51%E6%B5%B7%E9%99%B8.m4a', duration=25000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/tuqvuwwcyn4s7g4/%E5%85%92%E7%AB%A51%E5%9B%9B%E7%B8%A3.m4a', duration=25000))
+    elif event.message.text == "兒童案例2":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好我是急診醫生，剛護理師量體溫38.9度，看孩子精神倦怠、有拉肚子情形，會吐，先抽血及大便檢查，在確定診斷。\n醫生：你好，??係急診醫生，頭先護理師量體溫係38.9度，??看細人仔當作，歸身軟怠怠無精神、還過會屙痢肚、會嘔，愛先抽血摎做大便檢查，正來確定診斷。\n家屬：醫生請問報告要會等多久？\n家屬：醫生請問報告愛等幾久？\n醫生：報告很快就出來了。\n醫生：報告當遽就會出來。\n家屬：好的。\n家屬：好。\n醫生：報告出來了，確定是輪狀病毒。\n醫生：報告出來咧，確定係輪狀病毒。\n家屬：我該怎麼辦，需要注意甚麼。\n家屬：該??愛仰般？愛注意兜麼?。\n醫生：勤洗手，補充水分、注意精神狀態。\n醫生：愛較勤兜洗手，補充水分、注意看佢?精神好無？\n家屬：那除了注意這些，需要住院嗎？\n家屬：除了愛注意這兜，該還需要住院無？\n醫生：目前輪狀病毒我們先給止瀉藥及退燒就好了。\n醫生：目前輪狀病毒??兜先分佢止瀉藥摎退燒就好咧。\n家屬：我了解了。\n家屬：??了解咧，承蒙。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/3d55koqubvibsaa/%E5%85%92%E7%AB%A52%E6%B5%B7%E9%99%B8.m4a', duration=64000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/q4wg331v0ancpyo/%E5%85%92%E7%AB%A52%E5%9B%9B%E7%B8%A3.m4a', duration=64000))
+
+
+
+
 def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
@@ -318,7 +370,7 @@ def  carousel_template():
         template=CarouselTemplate(
         columns=[
             CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 title='急診情境',
                 text='車禍',
                 actions=[
@@ -333,7 +385,7 @@ def  carousel_template():
                 ]
             ),
             CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 title='急診情境',
                 text='燙傷',
                 actions=[
@@ -348,7 +400,7 @@ def  carousel_template():
                 ]
             ),
             CarouselColumn(
-                thumbnail_image_url='https://i.imgur.com/CCohubT.jpg',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 title='急診情境',
                 text='兒童',
                 actions=[
