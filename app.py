@@ -66,28 +66,28 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/lnrabyvq0rgjdvb/%E8%A4%87%E8%A8%BA%E6%B5%B7%E9%99%B8%20%28online-audio-converter.com%29.m4a', duration=14000))
     elif event.message.text == "複診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
-        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/gju0mm0e26ublff/backsea.m4a', duration=14000))
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/3kdfgl104issg1g/backfour.m4a', duration=14000))        
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/oslhnkms01zr6p9/%E8%A4%87%E8%A8%BA%E6%B5%B7%E9%99%B8.m4a', duration=14000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/69opf85vgcmmdn6/%E8%A4%87%E8%A8%BA%E5%9B%9B%E7%B8%A3.m4a', duration=14000))        
     elif event.message.text == "電話掛號1":
         line_bot_api.push_message(uid, TextSendMessage('櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得用電話先掛號無？\n櫃檯：可以，麻煩給我你的身分證字號。\n櫃檯：做得，麻煩分??你?身分證號碼。\n病人：好的，A123456789\n病人：好，A123456789。'))
-        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropboxusercontent.com/s/yro6rm2h1rk2zob/%E9%9B%BB%E8%A9%B11%E6%B5%B7%E9%99%B8.m4a', duration=22000))
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropboxusercontent.com/s/lqpabvzcni2mpc9/%E9%9B%BB%E8%A9%B11%E5%9B%9B%E7%B8%A3.m4a', duration=19000))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/yro6rm2h1rk2zob/%E9%9B%BB%E8%A9%B11%E6%B5%B7%E9%99%B8.m4a', duration=22000))
+        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropboxusercontent.com/s/lqpabvzcni2mpc9/%E9%9B%BB%E8%A9%B11%E5%9B%9B%E7%B8%A3.m4a', duration=19000))
     elif event.message.text == "電話掛號2":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得電話先掛號無？\n櫃檯：不可以喔,必須現場掛好。\n櫃檯：做毋得哦！一定愛現場掛號。\n病人：好的\n病人：好。'))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+        line_bot_api.push_message(uid, TextSendMessage('櫃檯：你好，這裡是新生診所。\n櫃檯：你好，這位係新生診所。\n病人：請問可以電話預約嗎？\n病人：請問做得電話先掛號無？\n櫃檯：不可以喔,必須現場掛好。\n櫃檯：做毋得哦！一定愛現場掛號。\n病人：好的\n病人：好。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/lm5w282bx706gqf/%E9%9B%BB%E8%A9%B12%E6%B5%B7%E9%99%B8.m4a', duration=17000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/u4kn6zza93rngbz/%E9%9B%BB%E8%A9%B12%E5%9B%9B%E7%B8%A3.m4a', duration=17000))
     elif event.message.text == "電話掛號3":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+        line_bot_api.push_message(uid, TextSendMessage('櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/7w7s6kjdx340xqs/%E9%9B%BB%E8%A9%B13%E6%B5%B7%E9%99%B8.m4a', duration=22000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/j0me9yt64y0lmei/%E9%9B%BB%E8%A9%B13%E5%9B%9B%E7%B8%A3.m4a', duration=22000))
     elif event.message.text == "身心科":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+        line_bot_api.push_message(uid, TextSendMessage('櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/7w7s6kjdx340xqs/%E9%9B%BB%E8%A9%B13%E6%B5%B7%E9%99%B8.m4a', duration=22000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/j0me9yt64y0lmei/%E9%9B%BB%E8%A9%B13%E5%9B%9B%E7%B8%A3.m4a', duration=22000))
     elif event.message.text == "小兒科":
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='醫生：您好寶寶怎麼了?\n醫生：你好！嬰兒仔有仰般係無?\n家屬：最近屁股紅紅的、有破皮，換尿布都會哭。\n家屬：最近屎朏紅紅、有爛皮，換尿布都會噭。\n醫生：讓我打開尿布看寶寶的臀部。\n醫生：分??打開尿布看嬰兒仔?屎朏。\n家屬：好的。\n家屬：好。\n醫生：這是尿布疹。\n醫生：這係尿布疹。\n家屬：甚麼是尿布疹。\n家屬：麼?係尿布疹。\n醫生：太長時間沒更換尿布，所導致的。\n醫生：時間忒長無換尿布，所因致?。\n家屬：我該怎麼辦?\n家屬：該??愛仰般？\n醫生：勤換尿布，保持乾爽，別使用爽身粉。\n醫生：愛較輒兜換尿布，保持燥爽，毋好用爽身粉。\n家屬：為甚麼不能用爽身粉，這樣不是可以更乾爽嗎?\n家屬：做麼?毋好用爽身粉，恁樣敢毋係做得較燥爽乜?\n醫生：尿液及糞便加上爽身粉會沾附皮膚，使皮膚不透氣。\n醫生：該尿摎大便加上爽身粉會黏在皮膚，皮膚就毋會透氣。\n家屬：我了解。\n家屬：??了解。\n醫生：開個藥膏給寶寶使用，少量擦。\n醫生：開隻藥膏分嬰兒仔使用，愛少量兜仔膏。\n家屬：好的，謝謝醫生。\n家屬：好，承蒙醫生。'))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/abafcb0e-e190-ce77-6964-625a915d20fc.mp3', duration=100000))
-        #line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='http://163.25.34.177/Upload/Audio/08f43665-c5fe-a5b1-6c1e-14a5dc75f432.mp3', duration=100000))
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好寶寶怎麼了?\n醫生：你好！嬰兒仔有仰般係無?\n家屬：最近屁股紅紅的、有破皮，換尿布都會哭。\n家屬：最近屎朏紅紅、有爛皮，換尿布都會噭。\n醫生：讓我打開尿布看寶寶的臀部。\n醫生：分??打開尿布看嬰兒仔?屎朏。\n家屬：好的。\n家屬：好。\n醫生：這是尿布疹。\n醫生：這係尿布疹。\n家屬：甚麼是尿布疹。\n家屬：麼?係尿布疹。\n醫生：太長時間沒更換尿布，所導致的。\n醫生：時間忒長無換尿布，所因致?。\n家屬：我該怎麼辦?\n家屬：該??愛仰般？\n醫生：勤換尿布，保持乾爽，別使用爽身粉。\n醫生：愛較輒兜換尿布，保持燥爽，毋好用爽身粉。\n家屬：為甚麼不能用爽身粉，這樣不是可以更乾爽嗎?\n家屬：做麼?毋好用爽身粉，恁樣敢毋係做得較燥爽乜?\n醫生：尿液及糞便加上爽身粉會沾附皮膚，使皮膚不透氣。\n醫生：該尿摎大便加上爽身粉會黏在皮膚，皮膚就毋會透氣。\n家屬：我了解。\n家屬：??了解。\n醫生：開個藥膏給寶寶使用，少量擦。\n醫生：開隻藥膏分嬰兒仔使用，愛少量兜仔膏。\n家屬：好的，謝謝醫生。\n家屬：好，承蒙醫生。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/end557rr97vx0lt/%E5%B0%8F%E5%85%92%E7%A7%91%E6%B5%B7%E9%99%B8.m4a', duration=60000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/1zthhofqh4u5rux/%E5%B0%8F%E5%85%92%E7%A7%91%E5%9B%9B%E7%B8%A3.m4a', duration=60000))
 def buttons_template(): 
     buttons = TemplateSendMessage(
             alt_text='功能選單',
