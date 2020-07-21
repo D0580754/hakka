@@ -63,7 +63,7 @@ def handle_message(event):
     elif event.message.text == "初診":
         line_bot_api.push_message(uid, TextSendMessage('櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropboxusercontent.com/s/wr2r5hjjetuxd5s/abafcb0e-e190-ce77-6964-625a915d20fc%20%28online-audio-converter.com%29.m4a', duration=14000))
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropboxusercontent.com/s/wfkcgdi48hqhda4/firstfour.m4a', duration=14000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/lnrabyvq0rgjdvb/%E8%A4%87%E8%A8%BA%E6%B5%B7%E9%99%B8%20%28online-audio-converter.com%29.m4a', duration=14000))
     elif event.message.text == "複診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/gju0mm0e26ublff/backsea.m4a', duration=14000))
