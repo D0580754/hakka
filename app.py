@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri July 15 2020
-
 @author: wandereryeh
 """
 
@@ -49,6 +48,8 @@ def handle_message(event):
     #line_bot_api.reply_message(
      #   event.reply_token,
       #  TextSendMessage(text=event.message.text))
+    profile = line_bot_api.get_profile(event.source.user_id)
+    uid = profile.user_id #使用者ID
     if event.message.text == "Help":
         line_bot_api.reply_message(event.reply_token, buttons_template())
     elif event.message.text == "掛號":
@@ -60,8 +61,10 @@ def handle_message(event):
     elif event.message.text == "診所":
         line_bot_api.reply_message(event.reply_token, buttons_template5())
     elif event.message.text == "初診":
+        line_bot_api.push_message(uid, TextSendMessage('櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
+        #line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
+        #line_bot_api.reply_message(event.reply_token, buttons_template6())
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropboxusercontent.com/s/wr2r5hjjetuxd5s/abafcb0e-e190-ce77-6964-625a915d20fc%20%28online-audio-converter.com%29.m4a', duration=13800))
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
     elif event.message.text == "複診":
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：不是，之前來過了。\n病人：毋係，以前有來過。\n櫃檯：麻煩給我您的健保卡。\n櫃檯：麻煩分??你?健保卡。\n病人：好的，在這裡。\n病人：好，在這裡位。'))
     elif event.message.text == "電話掛號1":
@@ -174,6 +177,26 @@ def buttons_template4():
     ) 
     return buttons
 def buttons_template5(): 
+    buttons = TemplateSendMessage(
+            alt_text='診所選擇',
+            template=ButtonsTemplate(
+                    title='診所選擇',
+                    text='診所選擇',
+                thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
+                actions=[
+                     MessageTemplateAction(
+                        label='身心科',
+                        text='身心科'
+                    ), 
+                     MessageTemplateAction(
+                        label='小兒科',
+                        text='小兒科'
+                    )
+                ]
+            )
+    ) 
+    return buttons
+def buttons_template6(): 
     buttons = TemplateSendMessage(
             alt_text='診所選擇',
             template=ButtonsTemplate(
