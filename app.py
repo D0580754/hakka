@@ -45,9 +45,6 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #line_bot_api.reply_message(
-     #   event.reply_token,
-      #  TextSendMessage(text=event.message.text))
     profile = line_bot_api.get_profile(event.source.user_id)
     uid = profile.user_id #使用者ID
     if event.message.text == "Help":
@@ -60,6 +57,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, buttons_template4())
     elif event.message.text == "診所":
         line_bot_api.reply_message(event.reply_token, buttons_template5())
+    elif event.message.text == "身心科":
+        line_bot_api.reply_message(event.reply_token, buttons_template6())
     elif event.message.text == "初診":
         line_bot_api.push_message(uid, TextSendMessage('櫃檯：第一次來嗎？\n櫃檯：第一擺來係無？\n病人：是的。\n病人：係。\n櫃檯：麻煩填一下資料。\n櫃檯：麻煩填一下資料。\n病人：好的。\n病人：好。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropboxusercontent.com/s/wr2r5hjjetuxd5s/abafcb0e-e190-ce77-6964-625a915d20fc%20%28online-audio-converter.com%29.m4a', duration=14000))
@@ -80,10 +79,14 @@ def handle_message(event):
         line_bot_api.push_message(uid, TextSendMessage('櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/7w7s6kjdx340xqs/%E9%9B%BB%E8%A9%B13%E6%B5%B7%E9%99%B8.m4a', duration=22000))
         line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/j0me9yt64y0lmei/%E9%9B%BB%E8%A9%B13%E5%9B%9B%E7%B8%A3.m4a', duration=22000))
-    elif event.message.text == "身心科":
-        line_bot_api.push_message(uid, TextSendMessage('櫃檯：目前編號是30號，你的編號是40號。\n櫃檯：目前?號碼係30號，你?號碼係40號。\n病人：謝謝。\n病人：恁仔細/承蒙你。\n櫃檯：大約30分鐘後就輪到你，建議你提早過來。\n櫃檯：大約30分鐘過後就輪到你，建議你提早兜過來。\n病人：好的，10分鐘後過去，謝謝\n病人：好，10分鐘後會過去，恁仔細/承蒙你。'))
-        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/7w7s6kjdx340xqs/%E9%9B%BB%E8%A9%B13%E6%B5%B7%E9%99%B8.m4a', duration=22000))
-        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/j0me9yt64y0lmei/%E9%9B%BB%E8%A9%B13%E5%9B%9B%E7%B8%A3.m4a', duration=22000))
+    elif event.message.text == "身心科看診":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好我是精神科醫生，您怎麼了?\n醫生：你好，??係精神科醫生，你有仰般係無?\n病人：最近不知道就一直想哭，心情不好\n病人：最近無做麼?就緊想愛噭，心情毋好。\n醫生：這些情況持續多久?\n醫生：這兜情形續町有幾久咧？\n病人：大概有三個多月。\n病人：大約有三個零月。\n醫生：最近家裡或生活周遭發生什麼狀況嗎?\n醫生：最近屋下抑係生活?環境有發生麼?事情係無?\n病人：對爸爸的生活方式，比較不能接受(哭哭..)。\n病人：對??爸?生活方式，較不能接受(哭哭..)。\n醫生：看來這對於你影響很大。\n醫生：看來這對於你?影響盡大。\n病人：是的，想到就會哭，我可以聽到自己內心聲音，會想自殘自己。\n病人：係啊！想著就會噭，??做得聽著自家內心?聲音，會想愛傷害自家。\n醫生：最近晚上睡得好嗎?\n醫生：最近暗晡頭睡著好無?\n病人：晚上都沒什麼在睡，白天上課無法集中精神，就一直想哭。\n病人：暗晡頭都無麼?睡，日時頭上課無法度集中精神，就緊想愛噭。\n醫生：看來很困擾你。\n醫生：看來分你帶來盡多煩勞。\n病人：是的！\n病人：係啊！\n醫生：先吃藥看看情況可以改善，夜眠會比較好。\n醫生：先食藥仔看看，情況應該做得改善，暗晡頭會較好睡。\n病人：我知道了！\n病人：??知咧！\n醫生：預約一週後回診。\n醫生：預約一禮拜後轉來回診。\n病人：好的。\n病人：好，恁仔細/承蒙你。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/3gebcigetdesfl8/%E8%BA%AB%E5%BF%83%E7%A7%91%E7%9C%8B%E8%A8%BA%E6%B5%B7%E9%99%B8.m4a', duration=80000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/136oli64qenrm0a/%E8%BA%AB%E5%BF%83%E7%A7%91%E7%9C%8B%E8%A8%BA%E5%9B%9B%E7%B8%A3.m4a', duration=80000))
+    elif event.message.text == "身心科回診":
+        line_bot_api.push_message(uid, TextSendMessage('醫生：您好最近還好嗎?\n醫生：你好！恁久還好無?\n病人：沒什麼改善。\n病人：無麼?改善。\n醫生：例如哪裡？\n醫生：講看啊！係哪位仰般？\n病人：平常還是會聽到自己內心的聲音，我會想傷害家人及自己，我好害怕！\n病人：平常還係會聽著自家內心?聲音，??會想傷害屋下人摎自家，??當驚！\n醫生：上週拿的藥，請問有規則服藥嗎?\n醫生：上禮拜拿?藥仔，你有照規則服用無?\n病人：沒有，有時候會忘記吃\n病人：無，成時會毋記得食。\n醫生：情緒穩定的藥物一定要規則服藥，不能中斷。\n醫生：分心情穩定?藥仔一定愛照規則來服用，做毋得斷。\n病人：好的，我知道。\n病人：好，??知咧！\n醫生：幫你安排心理測驗。\n醫生：愛摎你安排心理測驗。\n病人：甚麼是心理測驗。\n病人：麼?係心理測驗。\n醫生：心理測驗是由心理師用圖片等做一些檢測。\n醫生：心理測驗係心理師用圖片等做?一兜檢測。\n病人：原來如此。\n病人：原來係恁樣。\n醫生：一樣要規則服藥，千萬別中斷\n醫生：共樣愛照規則服藥，千萬毋好停藥。\n病人：我會設定鬧鐘提醒，一免忘記，謝謝醫生。\n病人：??會設定鬧鐘仔來提醒，正毋會毋記得，承蒙醫生。'))
+        line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/z133utx61f6qdht/%E8%BA%AB%E5%BF%83%E7%A7%91%E5%9B%9E%E8%A8%BA%E6%B5%B7%E9%99%B8.m4a', duration=64000))
+        line_bot_api.reply_message(event.reply_token, AudioSendMessage(original_content_url='https://dl.dropbox.com/s/2haqizuajoyz3jy/%E8%BA%AB%E5%BF%83%E7%A7%91%E5%9B%9E%E8%A8%BA%E5%9B%9B%E7%B8%A3.m4a', duration=64000))
     elif event.message.text == "小兒科":
         line_bot_api.push_message(uid, TextSendMessage('醫生：您好寶寶怎麼了?\n醫生：你好！嬰兒仔有仰般係無?\n家屬：最近屁股紅紅的、有破皮，換尿布都會哭。\n家屬：最近屎朏紅紅、有爛皮，換尿布都會噭。\n醫生：讓我打開尿布看寶寶的臀部。\n醫生：分??打開尿布看嬰兒仔?屎朏。\n家屬：好的。\n家屬：好。\n醫生：這是尿布疹。\n醫生：這係尿布疹。\n家屬：甚麼是尿布疹。\n家屬：麼?係尿布疹。\n醫生：太長時間沒更換尿布，所導致的。\n醫生：時間忒長無換尿布，所因致?。\n家屬：我該怎麼辦?\n家屬：該??愛仰般？\n醫生：勤換尿布，保持乾爽，別使用爽身粉。\n醫生：愛較輒兜換尿布，保持燥爽，毋好用爽身粉。\n家屬：為甚麼不能用爽身粉，這樣不是可以更乾爽嗎?\n家屬：做麼?毋好用爽身粉，恁樣敢毋係做得較燥爽乜?\n醫生：尿液及糞便加上爽身粉會沾附皮膚，使皮膚不透氣。\n醫生：該尿摎大便加上爽身粉會黏在皮膚，皮膚就毋會透氣。\n家屬：我了解。\n家屬：??了解。\n醫生：開個藥膏給寶寶使用，少量擦。\n醫生：開隻藥膏分嬰兒仔使用，愛少量兜仔膏。\n家屬：好的，謝謝醫生。\n家屬：好，承蒙醫生。'))
         line_bot_api.push_message(uid, AudioSendMessage('https://dl.dropbox.com/s/end557rr97vx0lt/%E5%B0%8F%E5%85%92%E7%A7%91%E6%B5%B7%E9%99%B8.m4a', duration=60000))
@@ -171,7 +174,7 @@ def buttons_template4():
                     ),
                     MessageTemplateAction(
                         label='電話掛號3',
-                        text='電話掛號'
+                        text='電話掛號3'
                     )
                 ]
             )
@@ -199,19 +202,19 @@ def buttons_template5():
     return buttons
 def buttons_template6(): 
     buttons = TemplateSendMessage(
-            alt_text='診所選擇',
+            alt_text='身心科看診/回診',
             template=ButtonsTemplate(
-                    title='診所選擇',
-                    text='診所選擇',
+                    title='身心科看診/回診',
+                    text='看診/回診',
                 thumbnail_image_url='https://i.imgur.com/Hz1DDhu.png',
                 actions=[
                      MessageTemplateAction(
-                        label='身心科',
-                        text='身心科'
+                        label='看診',
+                        text='身心科看診'
                     ), 
                      MessageTemplateAction(
-                        label='小兒科',
-                        text='小兒科'
+                        label='回診',
+                        text='身心科回診'
                     )
                 ]
             )
