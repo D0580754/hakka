@@ -18,11 +18,11 @@ from linebot.models import *
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
-line_bot_api = LineBotApi('iV2OXMJ2HNRPzxsC12MmZQ2YzSw62Hgq5YyWMtQjOjMcfFhnL0bma+FnntoSVk9Rbx3JrlXxzAN/e/r5HXNVO3+NGERE0pM2BJHEXjmr51wFLp6YW/Kjue8tjy2m8wALtpUV5L5QHFrBG97CRpi6MgdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('zty+NgbqonF2diBrj8/m4J2D7mvLQJtdD8Q9jcQGVS2JGbI4zmrn4LaGFtYhdCYnhNW5WeeO9bvweN9zbRWrrYl1rNA9NX16pdb8UhMQKNU7bVYckhbG6dHKYSczFsaicInUL9F6dFBOx8eTkPpklwdB04t89/1O/w1cDnyilFU=')
 # 必須放上自己的Channel Secret
-handler = WebhookHandler('f72d0c623547e1af685b4698b4cfae03')
+handler = WebhookHandler('b62140d584b95f2d6ac1904c97346f4b')
 
-line_bot_api.push_message('U001571421ef73fd8b6f0d8cde5f68391', TextSendMessage(text='伺服器已啟動'))
+line_bot_api.push_message('U9a31ceb7985c6726caffb31e01c16b42', TextSendMessage(text='伺服器已啟動'))
 
 @app.route("/callback", methods=['POST'])
 def callback():
